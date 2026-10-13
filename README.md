@@ -22,6 +22,8 @@
 - raising `ValueError` for invalid intervals (if not positive whole number of seconds)
 - sensor2's time format is in mm:ss, not hh:mm
 
+- when I was writing up main I realised `interval_s` had to be filled in manually, I just assumed it was 15 since it was 15 the whole way in both the data sets
+
 **2. What went wrong on the way, and what did I change?** (A test that failed, an error, a prompt I had to rewrite. If nothing went wrong, say what you checked to be sure.)
 - I used plan mode for this, where the agent realised that since interval_s is a float (as given by the signature I was told not to change), and that the sensor 2 data only seemed to accept seconds in integers, some conversion would have to be done, which I had missed. I then told it to round to an integer then write since there were not yet examples of sensor2 taking floats as time intervals. Though 
 
