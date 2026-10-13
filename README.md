@@ -36,4 +36,6 @@ No, I havent tested this with real sensors yet and a lot of assumptions were mad
 
 ## The count
 
+TODO: RUN PYTESTS, THE REST SHOULD BE DONE
+
 <!-- Paste the last line of  python -m pytest , e.g. "2 passed in 0.03s". -->
