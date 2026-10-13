@@ -1,5 +1,7 @@
 # Assignment 4 — sensor 1 to sensor 2
 
+Tool used: VSCode Codex extension, GPT 6 Luna Extra High (github copilot was bugging out)
+
 ## The differences I found between the two formats
 
 <!-- A short list: one line per difference, and what your program does about it. -->

@@ -19,9 +19,31 @@ Example of the shape (fill in the body yourself):
         assert False, "body not written yet"
 """
 # PROMPT (final version used, for the test bodies):
-# (your prompt goes here)
+# Add exactly two pytest tests for the small and example sensor 1 files. In
+# each test, load with sensors.load_sensor1, save with sensors.save_sensor2
+# into tmp_path at 15-second intervals, and assert the output bytes exactly
+# match the corresponding expected Sensor 2 CSV file. Do not inspect sensors.py.
 import pytest
 import sensors
+from pathlib import Path
 
 
-# your tests go here
+DATA_DIR = Path(__file__).parent / "data"
+
+
+def test_small_conversion_matches_sensor2_bytes(tmp_path):
+    """The small Sensor 1 file must convert to the bytes in sensor2_small.csv."""
+    output_path = tmp_path / "sensor2_small_converted.csv"
+    readings = sensors.load_sensor1(str(DATA_DIR / "sensor1_small.csv"))
+    sensors.save_sensor2(str(output_path), readings, 15)
+
+    assert output_path.read_bytes() == (DATA_DIR / "sensor2_small.csv").read_bytes()
+
+
+def test_example_conversion_matches_sensor2_bytes(tmp_path):
+    """The example Sensor 1 file must convert to the bytes in sensor2_example.csv."""
+    output_path = tmp_path / "sensor2_converted.csv"
+    readings = sensors.load_sensor1(str(DATA_DIR / "sensor1_example.csv"))
+    sensors.save_sensor2(str(output_path), readings, 15)
+
+    assert output_path.read_bytes() == (DATA_DIR / "sensor2_example.csv").read_bytes()
