@@ -11,3 +11,6 @@ import sensors
 # Written by me
 data = sensors.load_sensor1(r"data\sensor1_example.csv")
 sensors.save_sensor2(r"data\sensor2_converted.csv", data, 15)
+
+data_small = sensors.load_sensor1(r"data\sensor1_small.csv")
+sensors.save_sensor2(r"data\sensor2_small_converted.csv", data_small, 15)

@@ -61,3 +61,6 @@ def save_sensor2(path: str, readings_bpm: list[float|int], interval_s: float) ->
                 formatted_reading = decimal_text.replace(".", ",")
 
             writer.writerow((timestamp, formatted_reading))
+
+    # I forgot to ask it to print the line so Im adding it manually
+    print(f"Saved {len(readings_bpm)} values.")

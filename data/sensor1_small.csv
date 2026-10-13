@@ -1,0 +1,6 @@
+# WristHR export
+# firmware 2.1
+time_s,hr_bpm
+0,
+15,90
+30,67.5
