@@ -13,7 +13,9 @@ import csv
 from decimal import Decimal
 
 # PROMPT (final version used):
-# (your prompt for load_sensor1 goes here)
+# Fill in `load_sensor1` and `save_sensor2` in `sensors.py`, view the `data/` folder for examples
+# Do not fill in or run anything else like tests yet. Do not delete any comments, but you can add extra ones.
+# Make no mistakes.
 def load_sensor1(path: str) -> list[float]:
     """Return the heart rates in bpm from a sensor 1 file, as a list of floats,
     in file order. A dropped sample is returned as 0.0."""
@@ -28,7 +30,9 @@ def load_sensor1(path: str) -> list[float]:
 
 
 # PROMPT (final version used):
-# (your prompt for save_sensor2 goes here)
+# Fill in `load_sensor1` and `save_sensor2` in `sensors.py`, view the `data/` folder for examples
+# Do not fill in or run anything else like tests yet. Do not delete any comments, but you can add extra ones.
+# Make no mistakes.
 def save_sensor2(path: str, readings_bpm: list[float|int], interval_s: float) -> None:
     """Write the heart rates (bpm) to a new file in the sensor 2 format,
     one reading every interval_s seconds, starting at 0."""
